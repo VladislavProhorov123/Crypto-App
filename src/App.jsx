@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { Layout } from "antd";
+import AppHeader from "./components/layout/AppHeader";
+import AppSider from "./components/layout/AppSider";
+import AppContent from "./components/layout/AppContent";
 
 export default function App() {
   return (
     <div>
-      <h1>React Crypto App</h1>
+      <Layout>
+        <AppHeader />
+        <Layout>
+          <AppSider />
+          <AppContent />
+        </Layout>
+      </Layout>
     </div>
-  )
+  );
 }
